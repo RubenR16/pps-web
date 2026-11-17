@@ -1,0 +1,25 @@
+{
+  "name": "cybershop",
+  "version": "0.1.0",
+  "description": "CyberShop: tienda online de tecnología (Node.js, Express y MySQL).",
+  "main": "server.js",
+  "private": true,
+  "license": "UNLICENSED",
+  "engines": { "node": ">=18" },
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node --watch server.js",
+    "init-db": "node scripts/init-db.js",
+    "reset-db": "node scripts/init-db.js --reset",
+    "check-db": "node scripts/check-db.js",
+    "test": "node --test"
+  },
+  "dependencies": {
+    "bcrypt": "^5.1.1",
+    "dotenv": "^16.4.5",
+    "express": "^4.21.2",
+    "express-session": "^1.18.1",
+    "multer": "^2.0.2",
+    "mysql2": "^3.11.3"
+  }
+}

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Finalizar compra · CyberShop</title>
+  <link rel="stylesheet" href="/css/styles.css">
+</head>
+<body>
+  <div id="site-header"></div>
+  <main class="container">
+    <div class="page-head"><h1>Finalizar compra</h1><p>Datos de envío y método de pago (simulado: no se realiza ningún cargo real).</p></div>
+    <div class="cart-layout" id="checkout-root" hidden>
+      <section class="card form-card">
+        <h2>Datos de envío</h2>
+        <div id="checkout-alert" hidden role="alert"></div>
+        <form id="checkout-form" novalidate>
+          <div class="field"><label for="shipping_name">Nombre y apellidos</label>
+            <input id="shipping_name" name="shipping_name" type="text" autocomplete="name" required maxlength="120">
+            <small class="field-error" data-error-for="shipping_name"></small></div>
+          <div class="field"><label for="shipping_address">Dirección</label>
+            <input id="shipping_address" name="shipping_address" type="text" autocomplete="street-address" required maxlength="255">
+            <small class="field-error" data-error-for="shipping_address"></small></div>
+          <div class="field-row">
+            <div class="field"><label for="shipping_city">Ciudad</label>
+              <input id="shipping_city" name="shipping_city" type="text" autocomplete="address-level2" required maxlength="80">
+              <small class="field-error" data-error-for="shipping_city"></small></div>
+            <div class="field"><label for="shipping_postal_code">Código postal</label>
+              <input id="shipping_postal_code" name="shipping_postal_code" type="text" autocomplete="postal-code" required maxlength="12">
+              <small class="field-error" data-error-for="shipping_postal_code"></small></div>
+          </div>
+          <div class="field-row">
+            <div class="field"><label for="shipping_country">País</label>
+              <input id="shipping_country" name="shipping_country" type="text" autocomplete="country-name" required maxlength="80">
+              <small class="field-error" data-error-for="shipping_country"></small></div>
+            <div class="field"><label for="shipping_phone">Teléfono (opcional)</label>
+              <input id="shipping_phone" name="shipping_phone" type="tel" autocomplete="tel" maxlength="30">
+              <small class="field-error" data-error-for="shipping_phone"></small></div>
+          </div>
+
+          <fieldset class="pay-options">
+            <legend>Método de pago (simulado)</legend>
+            <label class="pay-option"><input type="radio" name="payment_method" value="card" checked> <span>💳 Tarjeta</span></label>
+            <label class="pay-option"><input type="radio" name="payment_method" value="transfer"> <span>🏦 Transferencia</span></label>
+            <label class="pay-option"><input type="radio" name="payment_method" value="cod"> <span>📦 Contra reembolso</span></label>
+            <small class="field-error" data-error-for="payment_method"></small>
+          </fieldset>
+          <p class="hint">No se solicitan datos de tarjeta: el pago es una simulación.</p>
+
+          <button class="btn btn-block" type="submit">Confirmar pedido</button>
+        </form>
+      </section>
+      <aside class="card summary-card" id="checkout-summary"></aside>
+    </div>
+  </main>
+  <div id="site-footer"></div>
+  <script src="/js/api.js"></script>
+  <script src="/js/ui.js"></script>
+  <script src="/js/session.js"></script>
+  <script src="/js/forms.js"></script>
+  <script src="/js/checkout.js"></script>
+</body>
+</html>

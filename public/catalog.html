@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Catálogo · CyberShop</title>
+  <link rel="stylesheet" href="/css/styles.css">
+</head>
+<body>
+  <div id="site-header"></div>
+  <main class="container">
+    <div class="page-head">
+      <h1>Catálogo</h1>
+      <p>Busca, filtra por categoría y ordena los productos.</p>
+    </div>
+    <div class="catalog-layout">
+      <aside class="filters" aria-label="Filtros">
+        <form id="filter-form" role="search">
+          <h3><label for="filter-search">Buscar</label></h3>
+          <input type="search" id="filter-search" placeholder="Nombre o descripción" maxlength="100" autocomplete="off">
+        </form>
+        <div>
+          <h3>Categorías</h3>
+          <ul class="cat-list" id="category-list"></ul>
+        </div>
+        <div>
+          <h3><label for="filter-sort">Ordenar por</label></h3>
+          <select id="filter-sort">
+            <option value="newest">Novedades</option>
+            <option value="price_asc">Precio: menor a mayor</option>
+            <option value="price_desc">Precio: mayor a menor</option>
+            <option value="name">Nombre (A-Z)</option>
+          </select>
+        </div>
+      </aside>
+      <section aria-live="polite">
+        <div class="results-bar"><span id="result-count">Cargando…</span></div>
+        <div class="product-grid" id="results"></div>
+        <nav class="pagination" id="pagination" aria-label="Paginación"></nav>
+      </section>
+    </div>
+  </main>
+  <div id="site-footer"></div>
+  <script src="/js/api.js"></script>
+  <script src="/js/ui.js"></script>
+  <script src="/js/session.js"></script>
+  <script src="/js/catalog.js"></script>
+</body>
+</html>

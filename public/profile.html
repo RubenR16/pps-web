@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Mi perfil · CyberShop</title>
+  <link rel="stylesheet" href="/css/styles.css">
+</head>
+<body>
+  <div id="site-header"></div>
+  <main class="container">
+    <div class="page-head">
+      <h1>Mi perfil</h1>
+      <p>Gestiona tus datos personales y tu contraseña.</p>
+    </div>
+    <div class="profile-grid" id="profile-root" hidden>
+      <aside class="card profile-summary">
+        <div class="avatar" aria-hidden="true">👤</div>
+        <h2 id="profile-username"></h2>
+        <dl class="detail-meta">
+          <dt>Rol</dt><dd id="profile-role"></dd>
+          <dt>Miembro desde</dt><dd id="profile-since"></dd>
+        </dl>
+      </aside>
+
+      <div class="profile-forms">
+        <section class="card form-card">
+          <h2>Datos personales</h2>
+          <div id="profile-alert" hidden role="alert"></div>
+          <form id="profile-form" novalidate>
+        <div class="field">
+          <label for="full_name">Nombre completo</label>
+          <input id="full_name" name="full_name" type="text" autocomplete="name" maxlength="120">
+          <small class="field-error" data-error-for="full_name"></small>
+        </div>
+        <div class="field">
+          <label for="email">Email</label>
+          <input id="email" name="email" type="email" autocomplete="email" required maxlength="120">
+          <small class="field-error" data-error-for="email"></small>
+        </div>
+        <div class="field">
+          <label for="phone">Teléfono</label>
+          <input id="phone" name="phone" type="tel" autocomplete="tel" maxlength="30">
+          <small class="field-error" data-error-for="phone"></small>
+        </div>
+        <div class="field">
+          <label for="address">Dirección</label>
+          <input id="address" name="address" type="text" autocomplete="street-address" maxlength="255">
+          <small class="field-error" data-error-for="address"></small>
+        </div>
+        <div class="field">
+          <label for="city">Ciudad</label>
+          <input id="city" name="city" type="text" autocomplete="address-level2" maxlength="80">
+          <small class="field-error" data-error-for="city"></small>
+        </div>
+        <div class="field">
+          <label for="postal_code">Código postal</label>
+          <input id="postal_code" name="postal_code" type="text" autocomplete="postal-code" maxlength="12">
+          <small class="field-error" data-error-for="postal_code"></small>
+        </div>
+        <div class="field">
+          <label for="country">País</label>
+          <input id="country" name="country" type="text" autocomplete="country-name" maxlength="80">
+          <small class="field-error" data-error-for="country"></small>
+        </div>
+            <button class="btn" type="submit">Guardar cambios</button>
+          </form>
+        </section>
+
+        <section class="card form-card">
+          <h2>Cambiar contraseña</h2>
+          <div id="password-alert" hidden role="alert"></div>
+          <form id="password-form" novalidate>
+        <div class="field">
+          <label for="current_password">Contraseña actual</label>
+          <input id="current_password" name="current_password" type="password" autocomplete="current-password" required maxlength="1024">
+          <small class="field-error" data-error-for="current_password"></small>
+        </div>
+        <div class="field">
+          <label for="new_password">Nueva contraseña</label>
+          <input id="new_password" name="new_password" type="password" autocomplete="new-password" required minlength="3" maxlength="72">
+          <small class="field-error" data-error-for="new_password"></small>
+        </div>
+        <div class="field">
+          <label for="new_password2">Repite la nueva contraseña</label>
+          <input id="new_password2" name="new_password2" type="password" autocomplete="new-password" required maxlength="72">
+          <small class="field-error" data-error-for="new_password2"></small>
+        </div>
+            <button class="btn" type="submit">Actualizar contraseña</button>
+          </form>
+        </section>
+      </div>
+    </div>
+  </main>
+  <div id="site-footer"></div>
+  <script src="/js/api.js"></script>
+  <script src="/js/ui.js"></script>
+  <script src="/js/session.js"></script>
+  <script src="/js/forms.js"></script>
+  <script src="/js/profile.js"></script>
+</body>
+</html>

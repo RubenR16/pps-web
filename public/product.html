@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Producto · CyberShop</title>
+  <link rel="stylesheet" href="/css/styles.css">
+</head>
+<body>
+  <div id="site-header"></div>
+  <main class="container">
+    <nav class="breadcrumb" id="breadcrumb" aria-label="Ruta de navegación"></nav>
+    <div id="product-root"><div class="skeleton" style="height:380px"></div></div>
+    <section class="section" id="comments-section" hidden>
+      <div class="section-head"><h2 id="comments-title">Comentarios</h2></div>
+      <div id="comments-root"></div>
+    </section>
+    <section class="section" id="related-section" hidden>
+      <div class="section-head"><h2>Productos relacionados</h2></div>
+      <div class="product-grid" id="related"></div>
+    </section>
+  </main>
+  <div id="site-footer"></div>
+  <script src="/js/api.js"></script>
+  <script src="/js/ui.js"></script>
+  <script src="/js/session.js"></script>
+  <script src="/js/forms.js"></script>
+  <script src="/js/product.js"></script>
+  <script src="/js/comments.js"></script>
+</body>
+</html>

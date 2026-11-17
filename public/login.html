@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Iniciar sesión · CyberShop</title>
+  <link rel="stylesheet" href="/css/styles.css">
+</head>
+<body>
+  <div id="site-header"></div>
+  <main class="container auth-wrap">
+    <section class="auth-card">
+      <h1>Iniciar sesión</h1>
+      <p class="muted">Accede a tu cuenta de CyberShop.</p>
+      <div id="form-alert" hidden role="alert"></div>
+      <form id="login-form" novalidate>
+        <div class="field">
+          <label for="identifier">Usuario o email</label>
+          <input id="identifier" name="identifier" type="text" autocomplete="username" required maxlength="120">
+          <small class="field-error" data-error-for="identifier"></small>
+        </div>
+        <div class="field">
+          <label for="password">Contraseña</label>
+          <input id="password" name="password" type="password" autocomplete="current-password" required maxlength="1024">
+          <small class="field-error" data-error-for="password"></small>
+        </div>
+        <button class="btn btn-block" type="submit">Entrar</button>
+      </form>
+      <p class="auth-switch">¿No tienes cuenta? <a href="/register.html">Regístrate</a></p>
+    </section>
+  </main>
+  <div id="site-footer"></div>
+  <script src="/js/api.js"></script>
+  <script src="/js/ui.js"></script>
+  <script src="/js/session.js"></script>
+  <script src="/js/forms.js"></script>
+  <script src="/js/auth.js"></script>
+</body>
+</html>

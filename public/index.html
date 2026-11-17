@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="CyberShop: tecnología, redes y hardware para tu laboratorio.">
+  <title>CyberShop · Tecnología para tu laboratorio</title>
+  <link rel="stylesheet" href="/css/styles.css">
+</head>
+<body>
+  <div id="site-header"></div>
+  <main>
+    <section class="hero container">
+      <h1>Equipa tu <span class="grad-text">laboratorio</span></h1>
+      <p>Periféricos, componentes, redes y hardware hacking. Una tienda real para practicar ciberseguridad en un entorno controlado.</p>
+      <div class="hero-cta">
+        <a class="btn" href="/catalog.html">Ver catálogo</a>
+        <a class="btn btn-outline" href="/catalog.html?category=hardware-hacking">Hardware hacking</a>
+      </div>
+    </section>
+
+    <section class="section container" aria-labelledby="cat-title">
+      <div class="section-head"><h2 id="cat-title">Categorías</h2></div>
+      <div class="category-grid" id="home-categories"></div>
+    </section>
+
+    <section class="section container" aria-labelledby="feat-title">
+      <div class="section-head">
+        <h2 id="feat-title">Productos destacados</h2>
+        <a href="/catalog.html">Ver todos →</a>
+      </div>
+      <div class="product-grid" id="home-featured"></div>
+    </section>
+  </main>
+  <div id="site-footer"></div>
+  <script src="/js/api.js"></script>
+  <script src="/js/ui.js"></script>
+  <script src="/js/session.js"></script>
+  <script src="/js/home.js"></script>
+</body>
+</html>
